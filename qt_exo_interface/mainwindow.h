@@ -16,18 +16,6 @@ public:
     ~MainWindow();
 
 private slots:
-    void on_checkLinux_clicked(bool checked);
-
-    void on_checkWindows_clicked(bool checked);
-
-    void on_checkOS_clicked(bool checked);
-
-    void on_radioLinux_clicked();
-
-    void on_radioWindows_clicked();
-
-    void on_radioOS_clicked();
-
     void on_pushButtonLinux_clicked();
 
     void on_pushButtonWindows_clicked();
@@ -35,6 +23,21 @@ private slots:
     void on_pushButtonOS_clicked();
 
     void on_checkButtonLinux_stateChanged(int arg1);
+
+    void on_radioButtonLinux_clicked();
+
+    void on_radioButtonWindows_clicked();
+
+    void on_radioButtonOS_clicked();
+
+    void on_checkButtonWindows_stateChanged(int arg1);
+
+    void on_checkButtonOS_stateChanged(int arg1);
+
+
+    void on_lineEditCode_textChanged(const QString &arg1);
+
+    void on_DifferentChoix_currentIndexChanged(const QString &arg1);
 
 private:
     Ui::MainWindow *ui;
