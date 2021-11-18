@@ -6,6 +6,21 @@ ClientWidget::ClientWidget(QWidget *parent)
     , ui(new Ui::ClientWidget)
 {
     ui->setupUi(this);
+
+    //creation de la socket
+    socketDeDialogueAvecServuer=new QTcpSocket(this);
+
+    //association des evenements liés à la socket avec les slots appelés
+    connect(socketDeDialogueAvecServuer,&QTcpSocket::connected,this,&ClientWidget::onQTcpSocket_connected);
+    connect(socketDeDialogueAvecServuer,&QTcpSocket::disconnected,this,&ClientWidget::onQTcpSocket_disconnected);
+    connect(socketDeDialogueAvecServuer,QOverload<QAbstractSocket::SocketError>::of(&QAbstractSocket::error),this,&ClientWidget::onQTcpSocket_error);
+    connect(socketDeDialogueAvecServuer,&QTcpSocket::hostFound,this,&ClientWidget::onQTcpSocket_hostFound);
+    connect(socketDeDialogueAvecServuer,&QTcpSocket::stateChanged,this,&ClientWidget::onQTcpSocket_stateChange);
+    connect(socketDeDialogueAvecServuer,&QTcpSocket::aboutToClose,this,&ClientWidget::onQTcpSocket_aboutToClose);
+    connect(socketDeDialogueAvecServuer,&QTcpSocket::bytesWritten,this,&ClientWidget::onQTcpSocket_bytesWritten);
+    connect(socketDeDialogueAvecServuer,&QTcpSocket::readChannelFinished,this,&ClientWidget::onQTcpSocket_readChannelFinished);
+    connect(socketDeDialogueAvecServuer,&QTcpSocket::readyRead,this,&ClientWidget::onQTcpSocket_readyRead);
+
 }
 
 ClientWidget::~ClientWidget()
@@ -16,7 +31,7 @@ ClientWidget::~ClientWidget()
 
 void ClientWidget::on_pushButtonConnec_clicked()
 {
-    if(ui->pushButtonConnec->text()=="connexion"){
+    if(ui->pushButtonConnec->text()=="Connexion"){
         socketDeDialogueAvecServuer->connectToHost(ui->lineEditIPServ->text(), ui->lineEditNroPort->text().toInt());
     }else{
         socketDeDialogueAvecServuer->disconnectFromHost();
@@ -25,7 +40,8 @@ void ClientWidget::on_pushButtonConnec_clicked()
 
 void ClientWidget::on_pushButtonOrdinateur_clicked()
 {
-
+    typeDeDemande="c";
+    socketDeDialogueAvecServuer->write(typeDeDemande.toLatin1());
 }
 
 void ClientWidget::on_pushButtonUtilisateur_clicked()
@@ -36,12 +52,14 @@ void ClientWidget::on_pushButtonUtilisateur_clicked()
 
 void ClientWidget::on_pushButtonArchitecture_clicked()
 {
-
+    typeDeDemande="a";
+    socketDeDialogueAvecServuer->write(typeDeDemande.toLatin1());
 }
 
 void ClientWidget::on_pushButtonOs_clicked()
 {
-
+    typeDeDemande="o";
+    socketDeDialogueAvecServuer->write(typeDeDemande.toLatin1());
 }
 
 void ClientWidget::onQTcpSocket_connected()
@@ -136,31 +154,3 @@ void ClientWidget::onQTcpSocket_readyRead()
 
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
