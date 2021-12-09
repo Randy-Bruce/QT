@@ -1,12 +1,12 @@
-#include "qgraohphicsboulehorizontalitem.h"
+#include "qgraphicsboulehorizontalitem.h"
 
-QGraohphicsBouleHorizontalItem::QGraohphicsBouleHorizontalItem(qreal x, qreal y, qreal width, qreal height, QGraphicsItem *parent):
+QGraphicsBouleHorizontalItem::QGraphicsBouleHorizontalItem(qreal x, qreal y, qreal width, qreal height, QGraphicsItem *parent):
     QGraphicsEllipseItem(x,y,width,height,parent),dx(2),dy(2) // dy =  boule n'importe ou
 {
 
 }
 
-void QGraohphicsBouleHorizontalItem::advance(int step)
+void QGraphicsBouleHorizontalItem::advance(int step)
 {
     moveBy(dx,dy);   // dy = boule n'importe ou
     qreal largeurBoule=rect().width();

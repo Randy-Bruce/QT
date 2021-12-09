@@ -1,6 +1,6 @@
 #ifndef WIDGET_H
 #define WIDGET_H
-#include "qgraohphicsboulehorizontalitem.h"
+#include "qgraphicsboulehorizontalitem.h"
 #include <QWidget>
 #include <QGraphicsScene>
 #include <QGraphicsItem>
@@ -27,7 +27,7 @@ private slots:
 private:
     Ui::Widget *ui;
     QGraphicsScene maScene;
-    QGraohphicsBouleHorizontalItem *maBoule;
+    QGraphicsBouleHorizontalItem *maBoule;
     QTimer timer;
 
 };

@@ -5,17 +5,17 @@
 
 
 
-class QGraohphicsBouleHorizontalItem : public QGraphicsEllipseItem
+class QGraphicsBouleHorizontalItem : public QGraphicsEllipseItem
 {
 public:
-    QGraohphicsBouleHorizontalItem(qreal x, qreal y, qreal width, qreal height, QGraphicsItem *parent = nullptr);
+    QGraphicsBouleHorizontalItem(qreal x, qreal y, qreal width, qreal height, QGraphicsItem *parent = nullptr);
 protected:
     void advance(int step) override;
 private:
     qreal dx;           // valeur du pas et sens de deplacement
                         // si < 0 de droite à gauche
                         // si > 0 de gouche à droite
-    qreal dy; // boule n'importe ou
+    qreal dy;           // boule n'importe ou
 
 };
 
