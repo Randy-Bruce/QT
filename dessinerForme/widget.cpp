@@ -114,7 +114,7 @@ void Widget::on_pushButtonDessiner_clicked()
     cercleGradient->setFlag(QGraphicsItem::ItemIsMovable);
     */
 
-    /*
+
     // Flocon de neige
     QPolygon poly3;
     poly3.setPoints(66,304,11,353,11,352,122,440,66,458,106,352,177,352,329,480,254,491,131,529,119,527,222,616,172,653,215,558,265,645,312,623,345,507,293,371,371,505,451,620,395,646,427,556,474,651,528,626,571,527,519,531,623,492,610,482,495,355,413,351,561,454,638,441,668,352,612,353,726,307,726,309,615,217,675,199,632,306,562,308,411,177,487,170,613,130,621,133,519,37,571,9,528,106,470,13,428,35,394,151,448,289,369,156,293,38,345,17,313,105,266,12,210,40,169,133,223,127,120,167,133,180,249,308,331,309,179,203,108,216,65,308,123);
@@ -124,7 +124,7 @@ void Widget::on_pushButtonDessiner_clicked()
     flocon->setBrush(bleu);
     flocon->setFlag(QGraphicsItem::ItemIsMovable);
     flocon->setScale(0.5);
-    */
+
 
 
     // ajout a la scene
@@ -137,7 +137,7 @@ void Widget::on_pushButtonDessiner_clicked()
     // scene->addItem(rectangle);
     // scene->addItem(rectGradItem);
     // scene->addItem(cercleGradient);
-    // scene->addItem(flocon);
+     scene->addItem(flocon);
 
 
 }

@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ClientWidget</class>
+ <widget class="QWidget" name="ClientWidget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>801</width>
+    <height>614</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>ClientWidget</string>
+  </property>
+  <widget class="QTabWidget" name="tabWidget">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>801</width>
+     <height>601</height>
+    </rect>
+   </property>
+   <property name="currentIndex">
+    <number>0</number>
+   </property>
+   <widget class="QWidget" name="tab">
+    <attribute name="title">
+     <string>Tab 1</string>
+    </attribute>
+    <widget class="QGroupBox" name="groupBoxConnexionServeur">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>801</width>
+       <height>571</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(225, 223, 223);</string>
+     </property>
+     <property name="title">
+      <string>Connexion au serveur</string>
+     </property>
+     <widget class="QWidget" name="layoutWidget">
+      <property name="geometry">
+       <rect>
+        <x>404</x>
+        <y>31</y>
+        <width>381</width>
+        <height>181</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <item>
+        <widget class="QLabel" name="labelEtatConnexion">
+         <property name="text">
+          <string>Etat de la connexion</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QTextEdit" name="textEditEtat"/>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="layoutWidget">
+      <property name="geometry">
+       <rect>
+        <x>12</x>
+        <y>32</y>
+        <width>391</width>
+        <height>181</height>
+       </rect>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout_3">
+         <item>
+          <widget class="QLabel" name="labelAdresseServeur">
+           <property name="text">
+            <string>Adresse IP du serveur : </string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="labelNumeroPortServeur">
+           <property name="text">
+            <string>Numéro de port du serveur :</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="labelPseudo">
+           <property name="text">
+            <string>Pseudo :</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout_2">
+         <item>
+          <widget class="QLineEdit" name="lineEditAdresseIPServeur">
+           <property name="text">
+            <string>172.18.58.72</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="lineEditPort">
+           <property name="text">
+            <string>1025</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="lineEditPseudo">
+           <property name="text">
+            <string>toto</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QPushButton" name="pushButtonJouer">
+      <property name="geometry">
+       <rect>
+        <x>460</x>
+        <y>230</y>
+        <width>241</width>
+        <height>191</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Jouer</string>
+      </property>
+     </widget>
+     <widget class="QWidget" name="layoutWidget">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>220</y>
+        <width>361</width>
+        <height>181</height>
+       </rect>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_2">
+       <item>
+        <widget class="QPushButton" name="pushButtonQuitter">
+         <property name="text">
+          <string>Quitter</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButtonConnexion">
+         <property name="text">
+          <string>Connexion</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QPushButton" name="pushButtonMonster">
+      <property name="geometry">
+       <rect>
+        <x>410</x>
+        <y>480</y>
+        <width>80</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Monster</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButtonCroco">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>460</y>
+        <width>80</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Croco</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButtonLupin">
+      <property name="geometry">
+       <rect>
+        <x>210</x>
+        <y>460</y>
+        <width>80</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Lupin</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButtonOreo">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>510</y>
+        <width>80</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Oreo</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButtonArsene">
+      <property name="geometry">
+       <rect>
+        <x>210</x>
+        <y>510</y>
+        <width>80</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Arsene</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label">
+      <property name="geometry">
+       <rect>
+        <x>140</x>
+        <y>420</y>
+        <width>81</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Survivor : </string>
+      </property>
+     </widget>
+     <widget class="QTextEdit" name="textEditSurvivor">
+      <property name="geometry">
+       <rect>
+        <x>200</x>
+        <y>410</y>
+        <width>111</width>
+        <height>31</height>
+       </rect>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="tab_2">
+    <attribute name="title">
+     <string>Tab 2</string>
+    </attribute>
+    <widget class="QGraphicsView" name="maVue">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>680</width>
+       <height>510</height>
+      </rect>
+     </property>
+     <property name="verticalScrollBarPolicy">
+      <enum>Qt::ScrollBarAlwaysOff</enum>
+     </property>
+     <property name="horizontalScrollBarPolicy">
+      <enum>Qt::ScrollBarAlwaysOff</enum>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>pushButtonQuitter</sender>
+   <signal>clicked()</signal>
+   <receiver>ClientWidget</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>75</x>
+     <y>326</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>147</x>
+     <y>307</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
